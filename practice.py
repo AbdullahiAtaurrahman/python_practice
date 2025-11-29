@@ -1,3 +1,5 @@
+# print('Hello World')
+
 # x = 10
 # y = x * 2 + 5 -3
 
@@ -88,80 +90,82 @@ x = 20
 #             break
 #         print(i, j)
 
-n = 4
-total = 0
-for i in range(1, n):
-    for j in range(i+1):
-        if(i+j)%3==0:
-            total+=1
-print(total)
+# n = 4
+# total = 0
+# for i in range(1, n):
+#     for j in range(i+1):
+#         if(i+j)%3==0:
+#             total+=1
+# print(total)
 
 # A class
-class Vehicle:
-    def __init__(self, make, model, year, mileage = 0):
-        self.make = make
-        self.model = model
-        self.year = year
-        self._mileage = mileage
+# class Vehicle:
+#     def __init__(self, make, model, year, mileage = 0):
+#         self.make = make
+#         self.model = model
+#         self.year = year
+#         self._mileage = mileage
 
-    def drive(self, distance):
-        self._mileage += distance
+#     def drive(self, distance):
+#         self._mileage += distance
 
-    def get_info(self):
-        return f"{self.make} {self.model} {self.year} model with {self._mileage}km mileage"
+#     def get_info(self):
+#         return f"{self.make} {self.model} {self.year} model with {self._mileage}km mileage"
     
-    def __str__(self):
-        return f"{self.year} {self.make} {self.model} Mileage: {self._mileage} km"
+#     def __str__(self):
+#         return f"{self.year} {self.make} {self.model} Mileage: {self._mileage} km"
 # a class method
-    @classmethod
-    def from_string(cls, vehicle_str):
-        make, model, year = vehicle_str.split("-")
-        return cls(make, model, year)
+    # @classmethod
+    # def from_string(cls, vehicle_str):
+    #     make, model, year = vehicle_str.split("-")
+    #     return cls(make, model, year)
 
 # A car class inheriting from vehicle
-class Car(Vehicle):
+# class Car(Vehicle):
 
 # a class attribute
-    vehicle_type = "Car"
-    def __init__(self, make, model, year, fuel_capacity, mileage=0):
-        super().__init__(make, model, year, mileage)
-        self.fuel_capacity = fuel_capacity
+    # vehicle_type = "Car"
+    # def __init__(self, make, model, year, fuel_capacity, mileage=0):
+    #     super().__init__(make, model, year, mileage)
+    #     self.fuel_capacity = fuel_capacity
     
-    def get_info(self):
-        return f"{self.make} {self.model}, a {self.year} model with {self._mileage}km mileage and {self.fuel_capacity} L fuel capacity"
+    # def get_info(self):
+    #     return f"{self.make} {self.model}, a {self.year} model with {self._mileage}km mileage and {self.fuel_capacity} L fuel capacity"
     
 
 # inheritance with static method
-class ElectricScooter(Vehicle):
-    def __init__(self, make, model, year, battery_percentage, mileage=0):
-        super().__init__(make, model, year, mileage)
-        self.battery_percentage = battery_percentage
+# class ElectricScooter(Vehicle):
+#     def __init__(self, make, model, year, battery_percentage, mileage=0):
+#         super().__init__(make, model, year, mileage)
+#         self.battery_percentage = battery_percentage
     
-    def drive(self, distance):
-        self.battery_percentage -= distance
-        if self.battery_percentage < 0:
-            self.battery_percentage = 0
-# a method overriding class it is inheriting from
-    def get_info(self):
-        return f"{self.make} {self.model}, a {self.year} model with {self._mileage}km mileage and {self.battery_percentage}% charge left"
+#     def drive(self, distance):
+#         self.battery_percentage -= distance
+#         if self.battery_percentage < 0:
+#             self.battery_percentage = 0
+# # a method overriding class it is inheriting from
+#     def get_info(self):
+#         return f"{self.make} {self.model}, a {self.year} model with {self._mileage}km mileage and {self.battery_percentage}% charge left"
     
     # static method
-    @staticmethod
-    def is_charging_required(battery_percentage):
-        return battery_percentage < 20
+    # @staticmethod
+    # def is_charging_required(battery_percentage):
+    #     return battery_percentage < 20
     
-vehicles = [
-    Car("Toyota", "Corolla", 2020, 50),
-    ElectricScooter("Xiaomi", "M365", 2022, 85),
-    Vehicle.from_string("Honda-Civic-2018")
-]
-
+# vehicles = [
+#     Car("Toyota", "Corolla", 2020, 50),
+#     ElectricScooter("Xiaomi", "M365", 2022, 85),
+#     Vehicle.from_string("Honda-Civic-2018")
+# ]
 
 # polymorphism
-def print_vehicle_report(vehicles):
-    for v in vehicles:
-        print(v.get_info())
+# def print_vehicle_report(vehicles):
+    # for v in vehicles:
+    #     print(v.get_info())
 
 # calling a polymorphic function
-print_vehicle_report(vehicles)
+# print_vehicle_report(vehicles)
 
+
+
+# Fast API(Introduction)
